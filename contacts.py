@@ -4,7 +4,7 @@ while True:
     telephone = input("Enter your telephone number: ")
     email = input("Enter your email: ")
 
-    if name.lower() == "stop":
+    if name == "stop":
         break
 
     if not telephone.isdigit():
