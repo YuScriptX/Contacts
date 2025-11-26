@@ -4,5 +4,25 @@ while True:
     telephone = input("Enter your telephone number: ")
     email = input("Enter your email: ")
 
-    print(f"\n{name}\n {telephone}\n {email}")
+    if name.lower() == "stop":
+        break
+
+    if not telephone.isdigit():
+        print("Telephone number must be positive")
+        continue
+
+    telephone_int = int(telephone)
+
+    if telephone_int < 0:
+        print("Can't be negative")
+        continue
+
+    if "@" not in email:
+        print("Invalid email")
+        continue
+
+    print(f"\nSaved:")
+    print(f"Name: {name}")
+    print(f"Telephone: {telephone}")
+    print(f"Email: {email}")
     
