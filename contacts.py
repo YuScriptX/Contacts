@@ -1,18 +1,18 @@
 while True:
 
     name = str(input("Enter your name: "))
-    telephone = input("Enter your telephone number: ")
-    email = input("Enter your email: ")
 
     if name == "stop":
         break
+
+    telephone = input("Enter your telephone number: ")
+    email = input("Enter your email: ")
 
     if not telephone.isdigit():
         print("Telephone number must be positive")
         continue
 
     telephone_int = int(telephone)
-
     if telephone_int < 0:
         print("Can't be negative")
         continue
