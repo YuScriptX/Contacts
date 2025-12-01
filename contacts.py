@@ -27,4 +27,5 @@ while True:
     print(f"Email: {email}")
     
 
-    file = open("contacts.txt","a")
+    with open("contacts.csv", "a") as file:
+        file.write(f"{name},{telephone},{email}\n")
