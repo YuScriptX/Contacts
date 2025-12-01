@@ -26,3 +26,5 @@ while True:
     print(f"Telephone: {telephone}")
     print(f"Email: {email}")
     
+
+    file = open("contacts.txt","a")
