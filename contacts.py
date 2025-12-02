@@ -30,10 +30,25 @@ while True:
     with open("contacts.csv", "a") as file:
         file.write(f"{name},{telephone},{email}\n")
 
-
+contacts = []
 
 print("\nAll saved contacts:")
 with open("contacts.csv", "r") as file:
     for line in file:
         name, telephone, email = line.rstrip().split(",")
-        print(f"Name: {name}, Phone: {telephone}, Email: {email}")
+        
+        contact = {
+            "name": name,
+            "telephone": telephone,
+            "email": email
+        }
+
+        contacts.append(contact)
+
+sorted_contacts = sorted(contacts, key=lambda contact: contact["name"].lower())
+
+
+print("\nAll Contacts (sorted by name):")
+for contact in sorted_contacts:
+    print(f"Name: {contact['name']}, Phone: {contact['telephone']}, Email: {contact['email']}")
+
