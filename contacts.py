@@ -29,3 +29,11 @@ while True:
 
     with open("contacts.csv", "a") as file:
         file.write(f"{name},{telephone},{email}\n")
+
+
+
+print("\nAll saved contacts:")
+with open("contacts.csv", "r") as file:
+    for line in file:
+        name, telephone, email = line.rstrip().split(",")
+        print(f"Name: {name}, Phone: {telephone}, Email: {email}")
